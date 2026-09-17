@@ -65,8 +65,9 @@ export default {
         },
       },
       fontFamily: {
-        display: ['"Chakra Petch"', 'Rajdhani', 'system-ui', 'sans-serif'],
-        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+        // Geist Mono is the single UI typeface (display, body, and mono).
+        display: ['"Geist Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+        sans: ['"Geist Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
         mono: ['"Geist Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       fontSize: {

@@ -17,7 +17,7 @@
     margin: 0;
     background-color: #070b14;
     color: #eef3fb;
-    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-family: 'Geist Mono', ui-monospace, SFMono-Regular, monospace;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     overflow: hidden; /* control-room app: no page scroll; regions scroll internally */
