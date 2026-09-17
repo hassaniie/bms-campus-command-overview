@@ -67,7 +67,7 @@ export default {
       fontFamily: {
         display: ['"Chakra Petch"', 'Rajdhani', 'system-ui', 'sans-serif'],
         sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+        mono: ['"Geist Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       fontSize: {
         '2xs': ['0.6875rem', { lineHeight: '0.85rem', letterSpacing: '0.02em' }],
