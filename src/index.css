@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background-color: #070b14;
+    color: #eef3fb;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow: hidden; /* control-room app: no page scroll; regions scroll internally */
+  }
+
+  /* Visible keyboard focus (accessibility) */
+  :focus-visible {
+    outline: 2px solid #38e1ff;
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+
+  ::selection {
+    background: rgba(56, 225, 255, 0.28);
+  }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-panel border border-base-600/70 bg-base-800/80 shadow-panel;
+  }
+
+  .panel-inset {
+    @apply rounded-card border border-base-600/60 bg-base-850/60;
+  }
+
+  /* Compact, aligned, mono numerics for telemetry */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1;
+  }
+
+  .label-cap {
+    @apply font-mono text-2xs uppercase tracking-[0.14em] text-ink-faint;
+  }
+
+  .grid-blueprint {
+    background-image:
+      linear-gradient(rgba(56, 225, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(56, 225, 255, 0.045) 1px, transparent 1px);
+    background-size: 36px 36px;
+  }
+
+  /* Thin, unobtrusive scrollbars for internal scroll regions */
+  .scroll-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #2c3c60 transparent;
+  }
+  .scroll-thin::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  .scroll-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scroll-thin::-webkit-scrollbar-thumb {
+    background-color: #22304f;
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  .scroll-thin::-webkit-scrollbar-thumb:hover {
+    background-color: #38496f;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
